@@ -1,4 +1,5 @@
 {
-  "http://localhost:3000/share-components/navbar.js": { "integrity": "sha512-79oNsq16t8Csu6B/horlF7RECGJrRCSTZNiGM3htEzF4lEuN9nUVgjkKGnobRAzH7cQfASTnQZyjNm0Kicau5A==", "contentType": "application/javascript; charset=UTF-8" },
+  "http://localhost:3000/share-components/navbar.js": { "integrity": "sha512-lPtQDDIrd3+4pj8eFRS9Fj002wsA7h01QiJBdYnPiB9KhIhbrcA6jeEiwnhDHlDDrwlw9/oVFAaIe7o6Ujqrbg==", "contentType": "application/javascript; charset=UTF-8" },
+  "https://mir-s3-cdn-cf.behance.net/project_modules/1400/66a0cc151309637.6309828d74095.png": { "integrity": "sha512-pExCtIDGgcr2j3vnzHBwbA5d76zWNUUvSndkHxur4NohEmdP7YMLkZMUagqV4ntA8+tjyst/3g8gEOq9Bym1Ig==", "contentType": "image/png" },
   "version": 1
 }

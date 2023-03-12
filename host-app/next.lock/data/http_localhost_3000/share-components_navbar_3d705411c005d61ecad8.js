@@ -1,46 +1,105 @@
-const SharedNavbar = () => (
-    
-    <div>
-    <style jsx global>
-        {`
-        .horizontal {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-        
-        .horizontal li {
-            float: left;
-        }
-        
-        .horizontal li a {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        
-        .horizontal li a:hover:not(.active) {
-            background-color: #000;
-        }
-        
-        .horizontal li a.active {
-            background-color:#04AA6D;
-        }
-        
-        `}
-    </style>
-    <ul class="horizontal">
-    <li><a class="active" href="javascript:void(0)">Home</a></li>
-    <li><a href="javascript:void(0)">News</a></li>
-    <li><a href="javascript:void(0)">Contact</a></li>
-    <li class="rightli"><a href="javascript:void(0)">About</a></li>
-  </ul>
-    </div>
-)
+import PropTypes from "prop-types";
 
-  export default SharedNavbar;
-  
+const menulist = [
+  {
+    text: "HOME",
+    active: true,
+  },
+  {
+    text: "About",
+    active: false,
+  },
+  {
+    text: "Contact",
+    active: false,
+  },
+];
+
+const SharedNavbar = ({ title, menu, background, color }) => (
+  <>
+  <style jsx>
+    {`
+    .header {
+        
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+                font-weight: 700;
+    }
+    `}
+  </style>
+    <style jsx global>
+      {`
+        .header {
+          background: ${background};
+          color: ${color};
+          text-align: center;
+          padding: 20px 0;
+        }
+        .header-inner {
+          max-width: 1500px;
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+        .header-left h1 {
+            font-size: 3rem;
+          text-transform: uppercase;
+        }
+
+        .header-right a {
+          text-transform: uppercase;
+          text-align: center;
+          margin: 0 1.89em;
+          padding: 0.618em 0;
+        }
+
+        .header-right a:hover:not(.active) {
+          color: rgb(237 77 0);
+        }
+
+        .header-right a.active {
+          color: ${background};
+          padding: 0.618em 1.89em;
+          background: rgb(237 77 0);
+          border-radius: 30px;
+        }
+      `}
+    </style>
+    <div className="header">
+      <div className="header-inner">
+        <div className="header-left">
+          <h1>{title}</h1>
+        </div>
+        <div class="header-right">
+          {menu.map(({ link = null, text, active }) => (
+            <a
+              {...(active ? { class: "active" } : {})}
+              href={link || "javascript:void(0)"}
+            >
+              {text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </>
+);
+
+SharedNavbar.PropTypes = {
+  title: PropTypes.string,
+  menu: PropTypes.array,
+  background: PropTypes.string,
+  color: PropTypes.string
+};
+
+SharedNavbar.defaultProps = {
+  title: "Punk Engineer",
+  menu: menulist,
+  background: "#000",
+  color: "#fff"
+};
+
+export default SharedNavbar;
