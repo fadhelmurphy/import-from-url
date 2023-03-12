@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import SharedNavbar from 'http://localhost:3000/share-components/navbar.js';
+import SharedNavbar from 'https://raw.githubusercontent.com/fadhelmurphy/import-from-url/main/components-app/public/share-components/navbar.js';
 
 const inter = Inter({ subsets: ['latin'] })
 

@@ -1,5 +1,5 @@
 {
-  "http://localhost:3000/share-components/navbar.js": { "integrity": "sha512-lPtQDDIrd3+4pj8eFRS9Fj002wsA7h01QiJBdYnPiB9KhIhbrcA6jeEiwnhDHlDDrwlw9/oVFAaIe7o6Ujqrbg==", "contentType": "application/javascript; charset=UTF-8" },
   "https://mir-s3-cdn-cf.behance.net/project_modules/1400/66a0cc151309637.6309828d74095.png": { "integrity": "sha512-pExCtIDGgcr2j3vnzHBwbA5d76zWNUUvSndkHxur4NohEmdP7YMLkZMUagqV4ntA8+tjyst/3g8gEOq9Bym1Ig==", "contentType": "image/png" },
+  "https://raw.githubusercontent.com/fadhelmurphy/import-from-url/main/components-app/public/share-components/navbar.js": { "integrity": "sha512-Ms5nsyD8XxieYqkMzwuAyw5nla2VV8u1m7l6KhmGeOQsF2GIbJukDgKrfxHsgx2M11gXsZXghltis9mRxjsTtg==", "contentType": "text/plain; charset=utf-8" },
   "version": 1
 }

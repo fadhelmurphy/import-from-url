@@ -2,7 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   experimental: {
-    urlImports: ['http://localhost:3000', "https://mir-s3-cdn-cf.behance.net/"],
+    urlImports: ['https://raw.githubusercontent.com', "https://mir-s3-cdn-cf.behance.net/"],
   },
   webpack: (config) => {
     config.module.rules.push({
